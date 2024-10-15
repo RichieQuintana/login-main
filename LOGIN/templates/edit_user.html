@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuario</title>
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form method="POST">
+        <input type="text" name="username" value="{{ user.username }}" required>
+        <input type="email" name="email" value="{{ user.email }}" required>
+        <input type="password" name="password" placeholder="Nueva Contraseña (opcional)">
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+    <a href="{{ url_for('user_bp.manage_users') }}">Volver al Dashboard</a>
+</body>
+</html>
